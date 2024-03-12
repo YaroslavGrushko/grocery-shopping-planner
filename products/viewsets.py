@@ -14,8 +14,12 @@ class ProductViewSet(ModelViewSet):
     filterset_class = ProductFilter
 
     def get_queryset(self):
-        current_user = self.request.user
-        return self.queryset.filter(category__user=current_user)
+        try:
+            current_user = self.request.user
+            return self.queryset.filter(category__user=current_user)
+        except:
+            # not authorized user
+            return None
         
     def get_serializer_class(self):
         if self.request.method == "GET":
