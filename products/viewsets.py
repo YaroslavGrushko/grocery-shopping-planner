@@ -17,7 +17,7 @@ class ProductViewSet(ModelViewSet):
         try:
             current_user = self.request.user
             return self.queryset.filter(category__user=current_user)
-        except:
+        except Exception:
             # not authorized user
             return None
         

@@ -1,9 +1,7 @@
-from unittest.mock import patch
 from django.contrib.auth.models import User
 from django.test import TestCase
 
 from products.models import Category, Product
-from products.serializers import ProductSerializer
 from django.core.exceptions import ValidationError
 
 class ModelsTestCase(TestCase):
