@@ -22,4 +22,7 @@ You see error:
 9. restart docker-compose:  
 to stop on Windows: **ctrl+c**  
 to start: **docker-compose up**
-10. Now visit [http://127.0.0.1:8000/api/swagger/](http://127.0.0.1:8000/api/swagger/) and feel free to use REST API
+10. Now you can visit [http://127.0.0.1:8000/api/swagger/](http://127.0.0.1:8000/api/swagger/) to access REST API  
+**_Note:_** All methods (except /accounts/login/ and /accounts/register/) of Grocery REST API needed JWT Token Authorization, so to use this methods you need:  
+  10.1 register User with /accounts/register/ endpoint or login as existing User with /accounts/login/ . As response you will get JWT Token.  
+  10.2 on Swagger page [http://127.0.0.1:8000/api/swagger/](http://127.0.0.1:8000/api/swagger/) click **Authorize** button and insert your JWT Token in value field like that:  
