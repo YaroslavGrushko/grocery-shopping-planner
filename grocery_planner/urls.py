@@ -22,8 +22,10 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from rest_framework.authtoken.views import obtain_auth_token
 
 from products.viewsets import ProductViewSet, CategoryViewSet
+from products.views import registration_view
 
 router = DefaultRouter()
 router.register('products', ProductViewSet)
@@ -46,6 +48,8 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/login/', obtain_auth_token),
+    path('accounts/register/', registration_view),
     path('api/', include(router.urls)),
     path('api/swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('api/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
