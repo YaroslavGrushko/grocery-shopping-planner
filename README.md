@@ -43,3 +43,8 @@ to start: **docker-compose up**
     <p align="center">
         <img src="https://github.com/YaroslavGrushko/grocery-shopping-planner/blob/main/jwt_token.png?raw=true" width="500" height="auto" style="margin: auto">
     </p>
+
+## Bonus: To run with front end (React) part:  
+1. Run this Django app locally  
+2. Run [Front-end part](https://github.com/YaroslavGrushko/Grocery-shopping-planner-frontend) locally  
+3. Visit [http://localhost:5173](http://localhost:5173) and feel free to register/login/create categories and products!  
