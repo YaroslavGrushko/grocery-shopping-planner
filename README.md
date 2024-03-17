@@ -1,4 +1,17 @@
-To run with Docker:  
+# Grocery shopping planner - Django (Rest Framework) REST API (CRUD for products and categories)
+## Features:  
+- Django Rest Framework  
+- PostgreSQL  
+- Authorization (JWT Token)  
+- Swagger documentation (drf-yasg)  
+- Docker  
+- Unit Tests  
+- Ruff (linter and code formatter)  
+- GitHub Actions  
+- Front-end part on **React** ([Grocery-shopping-planner-frontend](https://github.com/YaroslavGrushko/Grocery-shopping-planner-frontend))  
+  
+## Get Started  
+**To run with Docker:**    
 1. create .env and specify environment variables like this:  
 **DB_HOST=127.0.0.1  
   DB_NAME=grocery  
